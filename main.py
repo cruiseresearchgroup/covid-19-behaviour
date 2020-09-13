@@ -7,10 +7,12 @@ import csv
 import util
 import base64
 import math
+import segment
+import cluster
+import correlate
+import demographics
 
-blacklist = {'BLUETOOTH',
-             'SCREEN',
-             'WIFI',
+blacklist = { 'SCREEN',
              'LOCATION',
              'AUDIO',
              'ACTIVITY',
@@ -24,6 +26,7 @@ blacklist = {'BLUETOOTH',
 
 required_columns = {'code',
                     'application_name',
+                    'application_title',
                     'time_issued',
                     'application_package',
                     'esm_role',
@@ -33,7 +36,11 @@ required_columns = {'code',
                     'esm_interruption',
                     'time_zone',
                     'event_type',
-                    'time_issued'
+                    'time_issued',
+                    'bluetooth_address',
+                    'bluetooth_rssi',
+                    'wifi_bssid',
+                    'wifi_rssi'
                     }
 
 
@@ -73,7 +80,7 @@ def get_coded(codemap, new_item):
     if given_code in codemap:
         new_code = codemap[given_code]
     else:
-        new_code = nb64(len(codemap))
+        new_code = str(len(codemap))
         codemap[given_code] = new_code
     return new_code
 
@@ -95,7 +102,7 @@ def filter_data(infilename):
                            name: row.index(name) for name in required_columns
                         }
                         header = False
-                        writer.writerow(['time', 'code', 'app'])
+                        writer.writerow(['time', 'device_type', 'code', 'app', 'event_type', 'bluetooth_rssi', 'bluetooth_address', 'wifi_bssid', 'wifi_rssi'])
                         surveywriter.writerow(
                                 ['user',
                                  'valence',
@@ -103,15 +110,11 @@ def filter_data(infilename):
                                  'role',
                                  'interruption',
                                  'task',
+                                 'device_type',
                                  'time'
                                  ])
                     else:
                         new_code = get_coded(codes, row[index_map['code']])
-                        new_app = get_coded(
-                                apps,
-                                row[index_map['application_package']]
-                        )
-
                         if row[index_map['esm_valence']] != '-1':
                             surveywriter.writerow(
                                     [new_code,
@@ -120,15 +123,25 @@ def filter_data(infilename):
                                      row[index_map['esm_role']],
                                      row[index_map['esm_interruption']],
                                      row[index_map['esm_task']],
+                                     row[index_map['event_type']],
                                      row[index_map['time_issued']]
                                      ]
                                      )
 
                         if row[index_map['application_name']] not in blacklist:
+                            new_app = get_coded(
+                                    apps,
+                                    row[index_map['application_name']]
+                            )
                             writer.writerow(
-                                [nb64(int(float(row[index_map['time_issued']]))),
+                                [row[index_map['time_issued']],
+                                 row[index_map['event_type']],
                                  new_code,
-                                 new_app
+                                 new_app,
+                                 row[index_map['bluetooth_rssi']],
+                                 row[index_map['bluetooth_address']],
+                                 row[index_map['wifi_bssid']],
+                                 row[index_map['wifi_rssi']]
                                  ]
                             )
                     line += 1
@@ -151,18 +164,32 @@ def main():
     Usage: python main.py users  [file]
                           apps   [file]
                           segment [file]
-                          filter [infile] [outfile]
+                          cluster [files]
+                          filter [infile]
+                          demographics [usersfile]
+                          correlate [segments] [labels] [surveys]
     """
     if len(sys.argv) == 3 and sys.argv[1] == "users":
         df = load_data()
-        print(df.code.unique())
 
     elif len(sys.argv) == 3 and sys.argv[1] == "apps":
         df = load_data()
-        print(df.application_name.unique())
 
     elif len(sys.argv) == 3 and sys.argv[1] == "filter":
         filter_data(sys.argv[2])
+
+    elif len(sys.argv) == 3 and sys.argv[1] == "segment":
+        segment.segment(sys.argv[2])
+    
+    elif len(sys.argv) == 3 and sys.argv[1] == "cluster":
+        cluster.cluster_segments(sys.argv[2])
+
+    elif len(sys.argv) == 5 and sys.argv[1] == "correlate":
+        correlate.corralate_segments(sys.argv[2], sys.argv[3], sys.argv[4])
+
+    elif len(sys.argv) == 3 and sys.argv[1] == "demographics":
+        demographics.create_demographic_graphs(sys.argv[2])
+
     else:
         print(main.__doc__)
 
