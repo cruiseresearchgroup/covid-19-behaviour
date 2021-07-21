@@ -6,12 +6,17 @@ let
     matplotlib
     scikitlearn
     seaborn
+    python-language-server
+    pylint
+    jupyterlab
     (python-packages.callPackage ./nix/matplotlibvenn.nix {})
   ]; 
 
   R-with-my-packages = pkgs.rWrapper.override{ packages = with pkgs.rPackages; [ 
     tidyverse
     corrplot 
+    rstan
+    bayesplot
     lubridate
     reticulate
     proxy
@@ -25,5 +30,6 @@ pkgs.mkShell {
     python-with-my-packages
     R-with-my-packages
     evince
+    miller
   ];
 }

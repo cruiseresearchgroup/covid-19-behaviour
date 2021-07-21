@@ -79,7 +79,7 @@ def corralate_text(segmentsfile, surveytextfile, usersfile, clusternamesfile):
                 sorted_column = corr_df[column].sort_values()
                 head = sorted_column.head(1)
                 tail = sorted_column.tail(1)
-                notable_correlations = head.append(tail)
+                notable_correlations = tail.append(head)
                 new_labels = []
                 for index,value in notable_correlations.sort_values().iteritems():
                     cluster = index
@@ -183,6 +183,122 @@ def corralate_segments(segmentsfile, surveysfile, endofday_file, usersfile, clus
                 filtered = df[['label',feature]].dropna()
                 if len(filtered) > 1:
                     (corr, p_value) = stats.spearmanr(filtered['label'] == i, filtered[feature])
+                    row[feature + '_corr'] = corr
+                    corr_row[feature] = corr
+                    row[feature + '_p'] = p_value
+                else:
+                    row[feature + '_corr'] = float('nan')
+                    corr_row[feature] = float('nan')
+                    row[feature + '_p'] = float('nan')
+            rows.append(row)
+            corr_rows.append(corr_row)
+
+        p_values = pd.DataFrame(rows)
+        p_values = p_values.rename(columns={'energy_p': 'excitement_p','energy_corr': 'excitement_corr'}).drop(columns=['working_p','working_corr'])
+        corr_df = pd.DataFrame(corr_rows)
+        corr_df = corr_df.rename(columns={'energy': 'excitement'}).drop(columns=['working'])
+        table = {}
+        for column in corr_df:
+            sorted_column = corr_df[column].sort_values()
+            head = sorted_column.head(1)
+            tail = sorted_column.tail(1)
+            notable_correlations = head.append(tail)
+            new_labels = []
+            for index,value in notable_correlations.sort_values().iteritems():
+                cluster = index
+                p_value = p_values[column + '_p'][cluster]
+                r = p_values[column + '_corr'][cluster]
+                label = "{} (r: {: .2f}, p: {:.1e})".format(clusternames.at[cluster,'name'], r, p_value)
+                new_labels.append(label)
+            top_k_rows.append(new_labels)
+            top_k_index.append("{} & {}".format(demographic_name, column))
+
+        p_values.to_csv("correlations_{}.csv".format(demographic_count))
+        print("Demographic {} done".format(demographic_count))
+        demographic_count += 1
+    top_k = pd.DataFrame(top_k_rows,index=top_k_index)
+    print(top_k.to_latex(escape=False))
+    top_k.to_csv("top_k.csv")
+
+
+
+def alternative_corralate_segments(segmentsfile, surveysfile, endofday_file, usersfile, clusternamesfile):
+    surveys = pd.read_csv(surveysfile)
+    segments = pd.read_pickle(segmentsfile)
+    users = pd.read_csv(usersfile)
+    clusternames = pd.read_csv(clusternamesfile)
+
+    all_users = users['code'].unique()
+    females = users[users['gender'] == 0]['code'].unique()
+    males = users[users['gender'] == 1]['code'].unique()
+    age_18_24 = users[(users['age'] <= 24) & (users['age'] >= 18)]['code'].unique()
+    age_25_plus = users[users['age'] >= 25]['code'].unique()
+
+    demographics = { 'All': all_users }
+                   #, 'Male': males
+                   #, 'Female': females
+                   #, 'Age 18-24': age_18_24
+                   #, 'Age >= 25': age_25_plus
+                   #}
+
+    
+    ts_col = surveys.time
+    surveys['time'] = pd.to_datetime(ts_col, unit='ms')
+    surveys['working'] = surveys['role'].replace({1:0, 3:0.5, 2:1})
+    surveys['valence'] = surveys['valence'].replace({2:1, 3:2, 4:3,5:3})
+    surveys['arousal'] = surveys['arousal'].replace({2:1, 3:2, 4:3,5:3})
+    surveys = surveys.replace({-1: np.nan})
+    segments['duration'] = segments['to'] - segments['from']
+
+    daily_surveys = pd.read_csv(endofday_file)
+    daily_surveys['time'] = daily_surveys['StartDate'].apply(parse)
+    daily_surveys['Q1'] = daily_surveys['Q1'].replace({1:1,2:1,3:2,4:3,5:3})
+    daily_surveys['Q2'] = daily_surveys['Q2'].replace({1:1,2:1,3:2,4:3,5:3})
+
+
+    demographic_count = 0
+    top_k_rows = list()
+    top_k_index = list()
+    for demographic_name, demographic in demographics.items():
+        rows = list()
+        for _, survey in surveys.iterrows():
+            time = survey['time']
+            code = survey['code']
+            if code in demographic:
+                survey_start = time - pd.Timedelta(hours=1)
+                needed_segments = segments[(((segments['from'] <= time) & (segments['from'] >= survey_start)) | ((segments['to'] <= time) & (segments['to'] >= survey_start))) & (segments['code'] == code)]
+                if len(needed_segments) > 0:
+                    row = needed_segments.groupby('label').sum()['duration'].reindex(pd.RangeIndex(16)).fillna(pd.Timedelta(seconds=0)).to_dict()
+                    row['happiness'] = survey['valence']
+                    row['alertness'] = survey['arousal']
+                    rows.append(row)
+
+        for _,survey in daily_surveys.iterrows():
+            time = survey['time']
+            code = survey['code']
+            if code in demographic:
+                survey_start = time - pd.Timedelta(hours=24)
+                my_segments = segments[(((segments['from'] <= time) & (segments['from'] >= survey_start)) | ((segments['to'] <= time) & (segments['to'] >= survey_start))) & (segments['code'] == code)]
+                if len(my_segments) > 0:
+                    row = my_segments.groupby('label').sum()['duration'].reindex(pd.RangeIndex(16)).fillna(pd.Timedelta(seconds=0)).to_dict()
+                    row['productivity'] = - survey['Q1']
+                    row['interruptions'] = - survey['Q2']
+                    rows.append(row)
+                    print("Add Daily")
+        features = ['happiness', 'alertness', 'productivity','interruptions']
+        df = pd.DataFrame(rows)
+        label_count = 16
+
+        rows = list()
+        corr_rows = list()
+        df.to_csv("out.csv")
+        for i in range(label_count):
+            row = {}
+            corr_row = {}
+            for feature in features:
+                filtered = df[[i,feature]].dropna()
+                if len(filtered) > 1:
+                    (corr, p_value) = stats.spearmanr(filtered[i].dt.total_seconds(),filtered[feature])
                     row[feature + '_corr'] = corr
                     corr_row[feature] = corr
                     row[feature + '_p'] = p_value

@@ -16,38 +16,46 @@ import pytz
 import venn
 from dateutil.parser import parse
 import scipy.stats as stats
+import difference
+import re
 
-blacklist = { 'SCREEN',
-             'LOCATION',
-             'AUDIO',
-             'ACTIVITY',
-             'Keyboard',
-             'Mouse clicked',
-             'ESM',
-             'Location',
-             'Mouse scrolled',
-             'Battery'
-             }
+blacklist = {
+     'SCREEN',
+     'LOCATION',
+     'AUDIO',
+     'ACTIVITY',
+     'Keyboard',
+     'Mouse clicked',
+     'ESM',
+     'Location',
+     'Mouse scrolled',
+     'Battery',
+     'WIFI',
+     'BLUETOOTH',
+     'Balance'
+     }
 
-required_columns = {'code',
-                    'application_name',
-                    'application_title',
-                    'time_issued',
-                    'application_package',
-                    'esm_role',
-                    'esm_arousal',
-                    'esm_task',
-                    'esm_valence',
-                    'esm_interruption',
-                    'time_zone',
-                    'event_type',
-                    'time_issued',
-                    'bluetooth_address',
-                    'bluetooth_rssi',
-                    'wifi_bssid',
-                    'wifi_rssi'
-                    }
+required_columns = {
+    'code',
+    'application_name',
+    'application_title',
+    'time_issued',
+    'application_package',
+    'esm_role',
+    'esm_arousal',
+    'esm_task',
+    'esm_valence',
+    'esm_interruption',
+    'time_zone',
+    'event_type',
+    'time_issued',
+    'bluetooth_address',
+    'bluetooth_rssi',
+    'wifi_bssid',
+    'wifi_rssi'
+    }
 
+FILTER_PRINT_EVERY = 1000
 
 def load_data():
     """
@@ -93,6 +101,7 @@ def get_coded(codemap, new_item):
 def filter_data(infilename):
     codes = {}
     apps = {}
+    min_time = float('inf')
     with open(infilename, 'r') as infile:
         with open('activity.csv', 'w') as outfile:
             with open('surveys.csv', 'w') as surveyoutfile:
@@ -107,50 +116,59 @@ def filter_data(infilename):
                            name: row.index(name) for name in required_columns
                         }
                         header = False
-                        writer.writerow(['time', 'device_type', 'code', 'app', 'event_type', 'bluetooth_rssi', 'bluetooth_address', 'wifi_bssid', 'wifi_rssi'])
-                        surveywriter.writerow(
-                                ['user',
-                                 'valence',
-                                 'arousal',
-                                 'role',
-                                 'interruption',
-                                 'task',
-                                 'device_type',
-                                 'time'
-                                 ])
+                        writer.writerow([
+                            'time',
+                            'device_type',
+                            'code',
+                            'app',
+                            'bluetooth_rssi',
+                            'bluetooth_address',
+                            'wifi_bssid',
+                            'wifi_rssi'
+                            ])
+                        surveywriter.writerow([
+                            'user',
+                             'valence',
+                             'arousal',
+                             'role',
+                             'interruption',
+                             'task',
+                             'device_type',
+                             'time'
+                             ])
                     else:
-                        new_code = get_coded(codes, row[index_map['code']])
                         if row[index_map['esm_valence']] != '-1':
-                            surveywriter.writerow(
-                                    [new_code,
-                                     row[index_map['esm_valence']],
-                                     row[index_map['esm_arousal']],
-                                     row[index_map['esm_role']],
-                                     row[index_map['esm_interruption']],
-                                     row[index_map['esm_task']],
-                                     row[index_map['event_type']],
-                                     row[index_map['time_issued']]
-                                     ]
-                                     )
+                            surveywriter.writerow([
+                                row[index_map['code']],
+                                row[index_map['esm_valence']],
+                                row[index_map['esm_arousal']],
+                                row[index_map['esm_role']],
+                                row[index_map['esm_interruption']],
+                                row[index_map['esm_task']],
+                                row[index_map['event_type']],
+                                row[index_map['time_issued']]
+                                ])
 
                         if row[index_map['application_name']] not in blacklist:
-                            new_app = get_coded(
-                                    apps,
-                                    row[index_map['application_name']]
-                            )
-                            writer.writerow(
-                                [row[index_map['time_issued']],
-                                 row[index_map['event_type']],
-                                 new_code,
-                                 new_app,
-                                 row[index_map['bluetooth_rssi']],
-                                 row[index_map['bluetooth_address']],
-                                 row[index_map['wifi_bssid']],
-                                 row[index_map['wifi_rssi']]
-                                 ]
-                            )
+                            min_time = min(min_time, index_map['time_issued'])
+                            writer.writerow([
+                                row[index_map['time_issued']],
+                                row[index_map['event_type']],
+                                row[index_map['code']],
+                                row[index_map['application_name']],
+                                row[index_map['bluetooth_rssi']],
+                                row[index_map['bluetooth_address']],
+                                row[index_map['wifi_bssid']],
+                                row[index_map['wifi_rssi']]
+                                ])
                     line += 1
-                    print(f'Line {line}\r', end='')
+                    if line % FILTER_PRINT_EVERY == 0:
+                        print(f'Line {line}\r', end='')
+
+    # Prints the earliest time for the purpose of determining what
+    # collection period this was
+    print("First time recorded on this dataset")
+    print(min_time)
     with open('users.csv', 'w') as outfile:
         writer = csv.writer(outfile)
         writer.writerow(['user_id', 'code'])
@@ -184,14 +202,14 @@ def main():
     elif len(sys.argv) == 3 and sys.argv[1] == "filter":
         filter_data(sys.argv[2])
 
-    elif len(sys.argv) == 3 and sys.argv[1] == "segment":
-        segment.segment(sys.argv[2])
+    elif len(sys.argv) == 4 and sys.argv[1] == "segment":
+        segment.segment(sys.argv[2], sys.argv[3])
     
     elif len(sys.argv) == 3 and sys.argv[1] == "cluster":
         cluster.cluster_segments(sys.argv[2])
 
     elif len(sys.argv) == 7 and sys.argv[1] == "correlate":
-        correlate.corralate_segments(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6])
+        correlate.alternative_corralate_segments(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6])
 
     elif len(sys.argv) == 6 and sys.argv[1] == "correlatetext":
         correlate.corralate_text(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5])
@@ -199,8 +217,8 @@ def main():
     elif len(sys.argv) == 3 and sys.argv[1] == "demographics":
         demographics.create_demographic_graphs(sys.argv[2])
 
-    elif len(sys.argv) == 5 and sys.argv[1] == "clusterprototypes":
-        cluster_prototypes(sys.argv[2], sys.argv[3], sys.argv[4])
+    elif len(sys.argv) == 6 and sys.argv[1] == "clusterprototypes":
+        cluster_prototypes(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5])
 
     elif len(sys.argv) == 5 and sys.argv[1] == "drawcorrelations":
         draw_correlations(sys.argv[2], sys.argv[3], sys.argv[4])
@@ -226,11 +244,34 @@ def main():
     elif len(sys.argv) == 4 and sys.argv[1] == "count":
         count_points(sys.argv[2], sys.argv[3])
 
-    elif len(sys.argv) == 4 and sys.argv[1] == "correlateinfluence":
-        correlate_influence(sys.argv[2], sys.argv[3])
+    elif len(sys.argv) == 5 and sys.argv[1] == "correlateinfluence":
+        correlate_influence(sys.argv[2], sys.argv[3], sys.argv[4])
 
+    elif len(sys.argv) == 6 and sys.argv[1] == "diffyesterday":
+        difference.difference_yesterday(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5])
+
+    elif len(sys.argv) > 2 and sys.argv[1] == "picklesegments":
+        picklesegments(sys.argv[2:])
     else:
         print(main.__doc__)
+
+def picklesegments(files):
+    segments = list()
+    for filename in files:
+        regex = re.compile("\/([^-]+)-([^-]+)-segments.npy")
+        print(filename)
+        match = regex.search(filename)
+        code = match.group(1)
+        device = match.group(2)
+        print(f"{code} on {device}")
+        user_segments = np.load(filename, allow_pickle=True)
+        for segment in user_segments:
+            segment['code'] = code
+            segment['device'] = device
+            segments.append(segment)
+    df = pd.DataFrame(segments)
+    df.to_pickle("segments.pkl")
+
 
 
 def transform_multivariate_to_univariate(p):
@@ -276,7 +317,7 @@ def draw_text_correlations(correlationsfile, correlationsnamefile, title):
 
     plt.title(title + " p values")
 
-    sns.heatmap(p_values, fmt="s",annot=plot_labels, ax=ax)
+    sns.heatmap(p_values, fmt="s",annot=plot_labels, ax=ax, ylabel="Cluster")
     plt.savefig("p_values_text.png", bbox_inches='tight')
     plt.close()
 
@@ -291,10 +332,12 @@ def draw_text_correlations(correlationsfile, correlationsnamefile, title):
 def draw_correlations(correlationsfile, correlationsnamefile, title):
     correlations = pd.read_csv(correlationsfile)
     correlation_labels = pd.read_csv(correlationsnamefile)
-    features = ['happiness', 'energy','working', 'productivity', 'interruptions']
+    features = ['happiness', 'alertness', 'productivity', 'interruptions']
 #    if daily:
 #        features = ['productivity','interruptions','influence_on_happiness','influence_on_energy','influence_on_work_life_balance', 'difference_from_yesterday']
     correlations = correlations.set_index(correlation_labels['name'])
+    
+    print(correlations)
 
     p_values = correlations.filter(regex="^(" + "|".join(features) + ")_p$")
     coefficients = correlations.filter(regex="^(" + "|".join(features) + ")_corr$")
@@ -314,18 +357,21 @@ def draw_correlations(correlationsfile, correlationsnamefile, title):
     print(plot_labels)
     print(p_values)
 
-    fig, ax = plt.subplots(figsize=(10,10)) 
+    fig, ax = plt.subplots(figsize=(6,6)) 
     plt.title(title + " p values")
-    ax.axvline(3)
+    ax.axvline(2)
     sns.heatmap(p_values, annot=plot_labels, fmt="s", ax=ax)
+    ax.set(xlabel="variable", ylabel="activity")
     plt.savefig("p_values.png", bbox_inches='tight')
     plt.close()
 
-    fig, ax = plt.subplots(figsize=(10,10))
+    fig, ax = plt.subplots(figsize=(6,6))
     plt.title(title + " coefficients")
+    ax.axvline(2)
+    coefficients.columns = [name[:-5] for name in coefficients.columns]
     print(coefficients)
-    ax.axvline(3)
     sns.heatmap(coefficients, annot=True, fmt=".4f", vmin=-0.2, vmax=0.2, center=0, ax=ax)
+    ax.set(xlabel="variable", ylabel="activity")
     plt.savefig("coefficients.png", bbox_inches='tight')
     plt.close()
 
@@ -355,19 +401,21 @@ def cluster_prototypes(picklefile, activityfile, categoriesfile, clusternamesfil
     all_segments = list()
     activity = activity[activity['category'] != 'Unknown']
     categories = activity.category.unique()
-    s2_end = pd.Timestamp(year=2020, month=8, day=23, tz=pytz.timezone('Australia/Melbourne'))
-    activity = activity[activity['time'] > s2_end]
     all_categories = activity.category.unique()
 
     cluster_dist = pd.DataFrame(index=all_categories)
     for label in range(segments['label'].max() + 1):
         my_segments = segments[segments['label']==label]['seg']
         dist = my_segments.apply(transform_multivariate_to_univariate).mean(axis=0)
-        cluster_dist[clusternames.at[cluster,'name']] = dist
-        fig, ax = plt.subplots(figsize=(7,4))
-
-        result_frequencies.sort_values('frequency',ascending=False).head(5).plot.bar(ylim=(0,1),rot=0,ax=ax)
-        plt.savefig("cluster-prototypes/cluster-" + str(label) + ".png")
+        cluster_dist[clusternames.at[label,'name']] = dist
+    max_cat = cluster_dist.max(axis=1)
+    print(max_cat.sort_values())
+    cluster_dist = cluster_dist[max_cat > 0.1]
+    plt.subplots(figsize=(4,3))
+    g = sns.heatmap(cluster_dist.transpose(),xticklabels=True, yticklabels=True, cbar_kws={'label': 'Proportion in mean Segment'})
+    plt.xlabel("App Category")
+    plt.ylabel("Cluster")
+    plt.savefig("clusterprototypes.png", bbox_inches='tight')
 
 
 def surveydistribution(survey_file):
@@ -436,7 +484,7 @@ def count_points(activityfile, surveyfile):
     description['End'] = activity.groupby('period')['time'].max().dt.strftime('%Y-%m-%d')
     print(description.to_latex())
 
-def correlate_influence(esmfile, eodfile):
+def correlate_influence(esmfile, eodfile, usersfile):
     esm = pd.read_csv(esmfile)
     eod = pd.read_csv(eodfile)
     eod['time'] = eod['StartDate'].apply(parse)
@@ -445,6 +493,22 @@ def correlate_influence(esmfile, eodfile):
     esm['time'] = pd.to_datetime(esm.time, unit='ms')
     esm['date'] = esm.time.dt.date
     esm['working'] = esm['role'].replace({1:1, 3:2, 2:3})
+    esm['valence'] = esm['valence'].replace({2:1, 3:2, 4:3,5:3})
+    esm['arousal'] = esm['arousal'].replace({2:1, 3:2, 4:3,5:3})
+
+    users = pd.read_csv(usersfile)
+    all_users = users['code'].unique()
+    females = users[users['gender'] == 0]['code'].unique()
+    males = users[users['gender'] == 1]['code'].unique()
+    age_18_24 = users[(users['age'] <= 24) & (users['age'] >= 18)]['code'].unique()
+    age_25_plus = users[users['age'] >= 25]['code'].unique()
+
+    demographics = { 'All': all_users
+                   , 'Male': males
+                   , 'Female': females
+                   , 'Age 18-24': age_18_24
+                   , 'Age >= 25': age_25_plus
+                   }
 
     rows = list()
     for _,survey in eod.iterrows():
@@ -468,6 +532,79 @@ def correlate_influence(esmfile, eodfile):
     results = pd.DataFrame({'correlation coefficient': [happiness_corr, energy_corr, work_corr], 'p value': [happiness_p, energy_p, work_p]}, index=['happiness', 'energy', 'working'])
     print(results.to_latex())
 
+    for question in ['Q9', 'Q3', 'Q8', 'Q4']:
+        fig, ax = plt.subplots(figsize=(6,6)) 
+        eod[question] = eod[question].replace({5:1, 4:1, 3: 2, 2: 3, 1: 3})
+        average_diff = eod.groupby('code').mean()['Q9'].mean()
+        male_diff = eod[eod.code.isin(males)].groupby('code').mean()[question].mean() - average_diff
+        female_diff = eod[eod.code.isin(females)].groupby('code').mean()[question].mean() - average_diff
+
+        age_18_24_diff = eod[eod.code.isin(age_18_24)].groupby('code').mean()[question].mean() - average_diff
+        age_25_plus_diff = eod[eod.code.isin(age_25_plus)].groupby('code').mean()[question].mean() - average_diff
+        ax.axvline(0)
+        pd.DataFrame([ { 'demographic': 'female', 'color': 'pink', 'diff': female_diff}
+                     , { 'demographic': 'male', 'color': 'blue', 'diff': male_diff}
+                     , { 'demographic': '18-24', 'color': 'red', 'diff': age_18_24_diff}
+                     , { 'demographic': '>=25', 'color': 'green', 'diff': age_25_plus_diff}
+                     ]).plot.barh(y='diff', x='demographic', ax=ax)
+
+        _, gender_p = stats.ttest_ind(eod[eod.code.isin(males)][question], eod[eod.code.isin(females)][question])
+        _, age_p = stats.ttest_ind(eod[eod.code.isin(age_18_24)][question], eod[eod.code.isin(age_25_plus)][question])
+        print("Question {}".format(question))
+        print("Gender p {}".format(gender_p))
+        print("Age p {}".format(age_p))
+
+    def esm_correlations(points):
+        happiness_corr, happiness_p = stats.spearmanr(points['influnce_happiness'], points['happiness'])
+        energy_corr, energy_p = stats.spearmanr(points['influence_energy'], points['energy'])
+        work_corr, work_p = stats.spearmanr(points['influence_on_work_life_balance'], points['working'])
+        return pd.Series({ 'happiness_corr': happiness_corr
+                         , 'energy_corr': energy_corr
+                         , 'work_corr': work_corr
+                         })
+
+
+    male_df = df[df.code.isin(males)].groupby('code').apply(esm_correlations)
+    female_df = df[df.code.isin(females)].groupby('code').apply(esm_correlations)
+
+    age_18_24_df = df[df.code.isin(age_18_24)].groupby('code').apply(esm_correlations)
+    age_25_plus_df = df[df.code.isin(age_25_plus)].groupby('code').apply(esm_correlations)
+
+    print(male_df)
+    _, gender_happiness_p = stats.ttest_ind(male_df['happiness_corr'].dropna(), female_df['happiness_corr'].dropna())
+    _, gender_energy_p = stats.ttest_ind(male_df['energy_corr'].dropna(), female_df['energy_corr'].dropna())
+    _, gender_work_p = stats.ttest_ind(male_df['work_corr'].dropna(), female_df['work_corr'].dropna())
+
+    _, age_happiness_p = stats.ttest_ind(age_18_24_df['happiness_corr'].dropna(), age_25_plus_df['happiness_corr'].dropna())
+    _, age_energy_p = stats.ttest_ind(age_18_24_df['energy_corr'].dropna(), age_25_plus_df['energy_corr'].dropna())
+    _, age_work_p = stats.ttest_ind(age_18_24_df['work_corr'].dropna(), age_25_plus_df['work_corr'].dropna())
+    print("Correlation differences")
+    print(pd.DataFrame({'happiness': [gender_happiness_p, age_happiness_p], 'energy': [gender_energy_p, age_energy_p], 'work': [gender_work_p, age_work_p]}, index=['gender', 'age']))
+
+    male_df = df[df.code.isin(males)].groupby('code').mean()
+    female_df = df[df.code.isin(females)].groupby('code').mean()
+
+    age_18_24_df = df[df.code.isin(age_18_24)].groupby('code').mean()
+    age_25_plus_df = df[df.code.isin(age_25_plus)].groupby('code').mean()
+
+    print(male_df)
+    _, gender_happiness_p = stats.ttest_ind(male_df['happiness'].dropna(), female_df['happiness'].dropna())
+    _, gender_energy_p = stats.ttest_ind(male_df['energy'].dropna(), female_df['energy'].dropna())
+    _, gender_work_p = stats.ttest_ind(male_df['working'].dropna(), female_df['working'].dropna())
+
+    _, age_happiness_p = stats.ttest_ind(age_18_24_df['happiness'].dropna(), age_25_plus_df['happiness'].dropna())
+    _, age_energy_p = stats.ttest_ind(age_18_24_df['energy'].dropna(), age_25_plus_df['energy'].dropna())
+    _, age_work_p = stats.ttest_ind(age_18_24_df['working'].dropna(), age_25_plus_df['working'].dropna())
+    print("ESM differences")
+    print(pd.DataFrame({'happiness': [gender_happiness_p, age_happiness_p], 'energy': [gender_energy_p, age_energy_p], 'work': [gender_work_p, age_work_p]}, index=['gender', 'age']))
+
+    happiness_corr, happiness_p = stats.spearmanr(df['influnce_happiness'], df['happiness'])
+    energy_corr, energy_p = stats.spearmanr(df['influence_energy'], df['energy'])
+    work_corr, work_p = stats.spearmanr(df['influence_on_work_life_balance'], df['working'])
+    results = pd.DataFrame({'correlation coefficient': [happiness_corr, energy_corr, work_corr], 'p value': [happiness_p, energy_p, work_p]}, index=['happiness', 'energy', 'working'])
+    print(results.to_latex())
+
+    plt.savefig("demographic_diff.png", bbox_inches='tight')
 
 if __name__ == "__main__":
     main()

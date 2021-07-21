@@ -5,10 +5,11 @@ import matplotlib.pyplot as plt
 def create_demographic_graphs(filename):
     df = pd.read_csv(filename)
     ages = df[df['age'] != 0].drop_duplicates('age')
+    plt.figure(figsize=(3,3))
     ages['age'].hist(grid=False)
-    plt.title('Age Distributions')
+    plt.title('Participant Age Distribution')
     plt.xlabel('Age')
-    plt.savefig('age_distro.png')
+    plt.savefig('age_distro.png', bbox_inches='tight')
 
     # Now lets create the gender chart
     genders = df.sort_values('gender').drop_duplicates('code', keep='last')['gender']
@@ -18,9 +19,10 @@ def create_demographic_graphs(filename):
     genders = genders.replace(3,'other')
     tallies = genders.value_counts()
     print(tallies)
+    plt.figure(figsize=(3,3))
     tallies.plot.pie()
-    plt.title('Gender Distributions')
+    plt.title('Participant Gender Distribution')
     plt.xlabel('')
     plt.ylabel('')
-    plt.savefig('gender_distro.png')
+    plt.savefig('gender_distro.png', bbox_inches='tight')
 

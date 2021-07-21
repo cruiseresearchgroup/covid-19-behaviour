@@ -132,9 +132,8 @@ def segment(filename, categories_filename,draw_only=False):
     df.sort_values('time', inplace=True)
     all_segments = list()
     df = df[df['category'] != 'Unknown']
-    s2_end = pd.Timestamp(year=2020, month=8, day=23, tz=pytz.timezone('Australia/Melbourne'))
-    df = df[df['time'] > s2_end]
     categories = df.category.unique()
+    np.savetxt("category_names.csv", categories,delimiter=",",fmt='%s')
 
     for user in users:
         for device in devices:
@@ -155,6 +154,13 @@ def segment(filename, categories_filename,draw_only=False):
                 for day in days:
                     day_data = user_data[user_data['date'] == day]
                     print(str(day) + "-" + device + "-" + str(user))
+                    print(day)
+                    utc_start = day_data['utc_start'].iloc[0]
+                    from_time = (pd.to_datetime(utc_start, unit='ms'))
+                    print(pd.to_datetime(from_time))
+                    tts.append([])
+                    continue # Test data
+                        
                     win_daily, tt_new, knee = calculate_segments(day_data, day, categories)
                     if draw_only:
                         plot_app_usage(win_daily,categories,day,tt_new[:knee])
@@ -164,14 +170,18 @@ def segment(filename, categories_filename,draw_only=False):
                     win_dailies.append(win_daily)
                     daily_data.append(day_data)
                 
-                median_k_ratio = statistics.median(norm_ks)
+                #median_k_ratio = statistics.median(norm_ks)
                 segments = list()
-                print("K Ratio " + str(median_k_ratio))
+                #print("K Ratio " + str(median_k_ratio))
 
                 for i in range(len(tts)):
                     knee = int(data_lengths[i] * median_k_ratio)
                     last_segment = 0
                     first_time = daily_data[i]['utc_start'].iloc[0]
+                    print(from_time)
+                    print(day)
+                    print(day - from_time.date)
+                    continue
                     for t in np.sort(tts[i][:knee]):
                         segment = win_dailies[i][:, last_segment:t]
                         if len(segment[0]) > 0:

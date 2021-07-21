@@ -56,12 +56,14 @@ def venn_work(surveys_file):
         i += 1
     plt.savefig("venn_work.png", bbox_inches='tight')
     surveys['working'] = ((surveys['role'] == 3) | (surveys['role'] == 2))
+    surveys['valence'] = surveys['valence'].replace({2:1, 3:2, 4:3,5:3})
+    surveys['arousal'] = surveys['arousal'].replace({2:1, 3:2, 4:3,5:3})
 
     def describe_period(period):
         def describe_day(day):
             description = pd.Series()
             description['happiness'] = day['valence'].mean() / 5
-            description['energy'] = day['arousal'].mean() / 5
+            description['alertness'] = day['arousal'].mean() / 5
             description['work'] = day['working'].mean()
             description['private'] = (~day['working']).mean()
 #            description['valence_std'] = day['valence'].std()
