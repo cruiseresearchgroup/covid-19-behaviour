@@ -1,9 +1,15 @@
+"""
+Clusters igts segments.
+
+I hated this part methodology with a passion, please do not use.
+"""
 #!/usr/bin/env python
 # coding: utf-8
 
 # In[188]:
 
 
+import pandas as pd
 import numpy as np
 from sklearn import cluster
 from sklearn.metrics import silhouette_score
@@ -22,31 +28,24 @@ def transform_multivariate_to_univariate(p):
     return np.divide(np.sum(p, axis=1), fullsum)
 
 
-def cluster_segments(filename):
+def cluster_segments(segmentpickle):
     max_model_score = 0
     max_model = None
     sil_score = list()
-    segments = np.load(filename, allow_pickle=True)
-    print(len(segments))
-    for segment in segments:
-        if 'seg' in segment:
-            print("Yippee")
-        else:
-            print(segment)
-            print("Yaaaa")
-    distributions = np.array([transform_multivariate_to_univariate(seg['seg'])
-                              for seg in segments])
+    segments = pd.read_pickle(segmentpickle)
+    segments['distribution'] = segments['seg'].apply(transform_multivariate_to_univariate)
+    distributions = np.stack(np.array(segments['distribution']))
+    print(distributions.shape)
 
-    print(distributions)
-    for clusters in range(3, 30):
+    for clusters in range(3, 20):
         model = cluster.KMeans(n_clusters=clusters).fit(distributions)
-        print(model.labels_)
         sil_avg = silhouette_score(distributions, model.labels_)
-        print(sil_avg)
+        print("Sil score: " + str(sil_avg))
         sil_score.append(sil_avg)
 
         if sil_avg > max_model_score:
             max_model = model
             max_model_score = sil_avg
 
-    np.save(filename + "-labels", max_model.labels_)
+    segments['label'] = max_model.labels_
+    segments.to_pickle(segmentpickle)

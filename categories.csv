@@ -1,0 +1,949 @@
+,app,category,package,count
+0,System UI,Unknown,com.android.systemui,132098
+1,chrome.exe,Communication,-,103883
+2,Gboard,Tools,com.google.android.inputmethod.latin,36219
+3,Discord,Communication,com.discord,30430
+4,explorer.exe,Tools,-,21872
+5,Joey,News & Magazines,o.o.joey,21411
+6,WeChat,Communication,com.tencent.mm,19038
+7,Facebook,Social,com.facebook.katana,18724
+8,Messenger,Communication,com.facebook.orca,18723
+9,Instagram,Social,com.instagram.android,13534
+10,One UI Home,Personalization,com.sec.android.app.launcher,13198
+11,Edge screen,Unknown,com.samsung.android.app.cocktailbarservice,13060
+12,Discord.exe,Communication,-,12977
+13,Twitter,News & Magazines,com.twitter.android,10937
+14,OnePlus Launcher,Personalization,net.oneplus.launcher,9567
+15,Chrome,Communication,com.android.chrome,9398
+16,Samsung Keyboard,Tools,com.sec.android.inputmethod,9368
+17,msedge.exe,Communication,-,7292
+18,Teams.exe,Communication,-,6709
+19,-,Unknown,-,6579
+20,Firefox,Communication,org.mozilla.firefox,5983
+21,Samsung Pay,Lifestyle,com.samsung.android.spay,5921
+22,System Launcher,Unknown,com.oppo.launcher,4993
+23,Always On Display,Tools,com.samsung.android.app.aodservice,4885
+24,YouTube,Video Players & Editors,com.google.android.youtube,4667
+25,WhatsApp,Communication,com.whatsapp,4594
+26,Balance,Unknown,de.comtec.balance,4517
+27,LINE,Communication,jp.naver.line.android,4507
+28,Teams,Business,com.microsoft.teams,4146
+29,com.samsung.android.biometrics.app.setting,Unknown,com.samsung.android.biometrics.app.setting,4097
+30,firefox.exe,Communication,-,3935
+31,WinSCP.exe,Tools,-,3714
+32,EXCEL.EXE,Productivity,-,3681
+33,Huawei Home,Unknown,com.huawei.android.launcher,3602
+34,Sync Dev,News & Magazines,com.laurencedawson.reddit_sync.dev,3392
+35,Gmail,Communication,com.google.android.gm,3316
+36,Pixel Launcher,Tools,com.google.android.apps.nexuslauncher,3255
+37,Acrobat.exe,Tools,-,3155
+38,ZAKER新闻,News & Magazines,com.myzaker.ZAKER_Phone,3132
+39,OUTLOOK.EXE,Productivity,-,3055
+40,POWERPNT.EXE,Productivity,-,2752
+41,Snapchat,Social,com.snapchat.android,2741
+42,哔哩哔哩,Unknown,tv.danmaku.bili,2545
+43,pycharm64.exe,Tools,-,2475
+44,WINWORD.EXE,Productivity,-,2423
+45,Google,Tools,com.google.android.googlequicksearchbox,2409
+46,Wow.exe,Entertainment,-,2352
+47,Samsung keyboard,Tools,com.sec.android.inputmethod,2315
+48,MATLAB.exe,Tools,-,2292
+49,Sogou Keyboard,Tools,com.sohu.inputmethod.sogou,2261
+50,Photoshop.exe,Tools,-,2255
+51,Ambient Display,Unknown,com.oneplus.aod,2249
+52,Outlook,Productivity,com.microsoft.office.outlook,2224
+53,TikTok,Social,com.zhiliaoapp.musically,2213
+54,WeChat.exe,Communication,-,2210
+55,Google Play Music,Music & Audio,com.google.android.music,2187
+56,Android System,Unknown,android,2156
+57,TouchWiz home,Personalization,com.sec.android.app.launcher,2076
+58,Zoom.exe,Communication,-,1965
+59,LockApp.exe,Unknown,-,1939
+60,sublime_text.exe,Tools,-,1851
+61,eclipse.exe,Tools,-,1835
+62,Telegram,Communication,org.telegram.messenger,1805
+63,SearchUI.exe,Tools,-,1598
+64,Balance.exe,Unknown,-,1597
+65,Spotify,Music & Audio,com.spotify.music,1592
+66,ApplicationFrameHost.exe,Unknown,-,1587
+67,ShellExperienceHost.exe,Unknown,-,1527
+68,javaw.exe,Unknown,-,1468
+69,Uber Eats,Food & Drink,com.ubercab.eats,1425
+70,idea64.exe,Tools,-,1359
+71,Samsung Internet Beta,Communication,com.sec.android.app.sbrowser.beta,1304
+72,Settings,Unknown,com.android.settings,1278
+73,hyperion,Personalization,projekt.launcher,1278
+74,YouTube Music,Music & Audio,com.google.android.apps.youtube.music,1258
+75,Navigation dock,Unknown,com.huawei.android.FloatTasks,1244
+76,Domain,House & Home,com.fairfax.domain,1232
+77,Nova Launcher,Personalization,com.teslacoilsw.launcher,1222
+78,Messages,Communication,com.google.android.apps.messaging,1168
+79,Samsung Internet,Communication,com.sec.android.app.sbrowser,1160
+80,LinkedIn,Business,com.linkedin.android,1157
+81,Boost,News & Magazines,com.rubenmayayo.reddit,1142
+82,Reddit,News & Magazines,com.reddit.frontpage,1130
+83,Call,Communication,com.samsung.android.incallui,1030
+84,SnippingTool.exe,Tools,-,1021
+85,SwiftKey Keyboard,Productivity,com.touchtype.swiftkey,1004
+86,CommBank,Finance,com.commbank.netbank,990
+87,ConEmu64.exe,Tools,-,987
+88,Maps,Travel & Local,com.google.android.apps.maps,949
+89,Spotify.exe,Music & Audio,-,919
+90,Messages,Communication,com.samsung.android.messaging,885
+91,bilibili,Video Players & Editors,com.bilibili.app.in,883
+92,putty.exe,Tools,-,881
+93,Clock,Tools,com.oneplus.deskclock,837
+94,Samsung Keyboard,Tools,com.samsung.android.honeyboard,828
+95,GrammarlyForWindows.exe,Productivity,-,807
+96,Menulog,Food & Drink,com.menulog.m,801
+97,CommSec,Finance,au.com.commsec.android.CommSec,749
+98,WeChatStore.exe,Communication,-,738
+99,EmpaticaMemory.exe,Tools,-,729
+100,Zoom,Business,us.zoom.videomeetings,714
+101,Drive,Productivity,com.google.android.apps.docs,692
+102,steam.exe,Entertainment,-,689
+103,Google Play Store,Unknown,com.android.vending,684
+104,LED Cover Service,Unknown,com.sec.android.cover.ledcover,679
+105,PDFelement.exe,Tools,-,664
+106,notepad++.exe,Productivity,-,606
+107,YouTube Vanced,Video Players & Editors,com.vanced.android.youtube,581
+108,Phone,Communication,com.samsung.android.dialer,567
+109,Tinder,Lifestyle,com.tinder,564
+110,ABC News,News & Magazines,android.AbcApplication,551
+111,Photos,Photography,com.google.android.apps.photos,549
+112,Xperia™ Home,Unknown,com.sonyericsson.home,541
+113,RainbowSix.exe,Entertainment,-,525
+114,notepad.exe,Tools,-,525
+115,Flamingo,Communication,com.samruston.twitter,500
+116,手机淘宝,Shopping,com.taobao.taobao,494
+117,cmd.exe,Tools,-,479
+118,Gumtree,Shopping,com.ebay.gumtree.au,468
+119,Keep notes,Productivity,com.google.android.keep,460
+120,System launcher,Unknown,com.miui.home,460
+121,Messaging,Communication,com.sonyericsson.conversations,446
+122,vlc.exe,Video Players & Editors,-,441
+123,Hue,Lifestyle,com.philips.lighting.hue2,441
+124,Lite,Social,com.facebook.lite,439
+125,ONENOTE.EXE,Productivity,-,429
+126,Calendar,Productivity,com.google.android.calendar,415
+127,Action Launcher,Personalization,com.actionlauncher.playstore,408
+128,Gallery,Photography,com.sec.android.gallery3d,404
+129,Phone,Communication,com.android.dialer,401
+130,Among Us.exe,Action,-,381
+131,bilibili,Unknown,tv.danmaku.bili,380
+132,Adblock Browser,Communication,org.adblockplus.browser,379
+133,Castbox,News & Magazines,fm.castbox.audiobook.radio.podcast,378
+134,Slack,Business,com.Slack,370
+135,Up,Finance,au.com.up.money,365
+136,Photos,Photography,com.coloros.gallery3d,364
+137,WorkJam,Business,com.workjam.workjam,364
+138,Canvas Student,Education,com.instructure.candroid,358
+139,wfica32.exe,Communication,-,354
+140,Clock,Unknown,com.sec.android.app.clockpackage,351
+141,vpnui.exe,Unknown,-,340
+142,Contacts,Tools,com.android.contacts,337
+143,Messages,Communication,com.android.mms,336
+144,TachiyomiJ2K,Comics,eu.kanade.tachiyomi.j2k,331
+145,Code.exe,Tools,-,330
+146,Bixby Routines,Unknown,com.samsung.android.app.routines,315
+147,Newsfold,News & Magazines,it.mvilla.android.quote,314
+148,Camera,Unknown,com.sec.android.app.camera,303
+149,Whova,Business,com.whova.event,298
+150,Wuxiaworld,Unknown,com.wuxworld.disen.sckyus,296
+151,Google Play services,Tools,com.google.android.gms,278
+152,java.exe,Unknown,-,270
+153,Messaging,Communication,com.android.mms,267
+154,Netflix,Entertainment,com.netflix.mediaclient,264
+155,ING Banking,Finance,au.com.ingdirect.android,263
+156,Audible,Books & Reference,com.audible.application,260
+157,Pathbuilder2e,Entertainment,com.redrazors.pathbuilder2e,259
+158,TickTick,Productivity,com.ticktick.task,256
+159,ABC Kids listen,Music & Audio,au.net.abc.kidslisten,245
+160,SourceTree.exe,Tools,-,245
+161,stellaris.exe,Entertainment,-,242
+162,斗鱼直播,Unknown,air.tv.douyu.android,242
+163,Clock,Unknown,com.coloros.alarmclock,241
+164,Keep Notes,Productivity,com.google.android.keep,241
+165,Gestures & Motions,Unknown,com.coloros.gesture,240
+166,Depop,Shopping,com.depop,238
+167,Wox.exe,Unknown,-,236
+168,mspaint.exe,Tools,-,221
+169,dwm.exe,Unknown,-,220
+170,System UI,Unknown,com.samsung.desktopsystemui,215
+171,MyTherapy,Medical,eu.smartpatient.mytherapy,213
+172,Evernote.exe,Productivity,-,210
+173,LINE.exe,Communication,-,208
+174,Honeyview.exe,Photography,-,207
+175,Among Us,Action,com.innersloth.spacemafia,206
+176,Realestate,House & Home,au.com.realestate.app,206
+177,Samsung capture,Unknown,com.samsung.android.app.smartcapture,203
+178,GitHub,Productivity,com.github.android,203
+179,atmgr.exe,Communication,-,199
+180,CDViewer.exe,Unknown,-,194
+181,WinRAR.exe,Tools,-,187
+182,MHXX Dex.exe,Unknown,-,184
+183,Messenger Lite,Communication,com.facebook.mlite,183
+184,Pinterest,Lifestyle,com.pinterest,180
+185,JOOX,Music & Audio,com.tencent.ibg.joox,176
+186,Phone,Unknown,com.android.incallui,175
+187,TwitchUI.exe,Entertainment,-,171
+188,Pocket Casts,News & Magazines,au.com.shiftyjelly.pocketcasts,169
+189,Wickr Me,Social,com.mywickr.wickr2,166
+190,NAB,Finance,au.com.nab.mobile,166
+191,MendeleyDesktop.exe,Books & Refrence,-,165
+192,Phone,Communication,com.sonymobile.android.dialer,164
+193,Keepass2Android,Tools,keepass2android.keepass2android,160
+194,Camera,Photography,com.oneplus.camera,153
+195,E4 realtime,Medical,com.empatica.e4realtime,150
+196,Security,Unknown,com.miui.securitycenter,148
+197,Finder,Unknown,com.samsung.android.app.galaxyfinder,146
+198,eBay,Shopping,com.ebay.mobile,142
+199,My Optus,Tools,au.com.optus.selfservice,140
+200,Screenshot,Unknown,com.coloros.screenshot,140
+201,ANZ,Finance,com.anz.android.gomoney,135
+202,CAJVieweru.exe,Unknown,-,135
+203,Samsung Notes,Productivity,com.samsung.android.app.notes,135
+204,StartMenuExperienceHost.exe,Unknown,-,132
+205,Bendigo Bank,Finance,com.bendigobank.mobile,131
+206,Phone,Tools,com.google.android.dialer,130
+207,LastPass,Productivity,com.lastpass.lpandroid,130
+208,AniDroid,Books & Reference,com.jurasdev.anidroid,128
+209,Google News,News & Magazines,com.google.android.apps.magazines,127
+210,Scrap Collector,Casual,com.scrap.collector,127
+211,Package installer,Unknown,com.google.android.packageinstaller,125
+212,墨尔本超市,Shopping,com.xilu.daao,125
+213,Docs,Productivity,com.google.android.apps.docs.editors.docs,123
+214,7zG.exe,Tools,-,123
+215,LockAppHost.exe,Unknown,-,123
+216,Google Pay,Finance,com.google.android.apps.walletnfcrel,122
+217,steamwebhelper.exe,Entertainment,-,119
+218,BBC News,News & Magazines,bbc.mobile.news.ww,118
+219,mymacca's,Food & Drink,com.mcdonalds.au.gma,117
+220,Greenshot.exe,Tools,-,116
+221,Deliveroo,Food & Drink,com.deliveroo.orderapp,116
+222,DoorDash,Food & Drink,com.dd.doordash,115
+223,Domestic Violence,Unknown,net.hazelfire.domesticviolence,113
+224,EASI,Food & Drink,com.easi.customer,113
+225,IdleCourier,Casual,com.centurygames.idlecourier,113
+226,Translate,Tools,com.google.android.apps.translate,112
+227,Snipaste.exe,Tools,-,112
+228,Taskmgr.exe,Tools,-,112
+229,Samsung Health,Health & Fitness,com.sec.android.app.shealth,110
+230,知乎,Unknown,com.zhihu.android,104
+231,People edge,Unknown,com.samsung.android.service.peoplestripe,104
+232,Screenshot,Tools,com.oneplus.screenshot,103
+233,EasyOneHand,Unknown,com.sec.android.easyonehand,101
+234,Joy Launcher,Unknown,com.tct.launcher,97
+235,Stykz.exe,Unknown,-,95
+236,Lynx Remix,Unknown,lynx.remix,95
+237,DroidCamX,Tools,com.dev47apps.droidcamx,93
+238,Huawei Share,Unknown,com.huawei.android.internal.app,93
+239,Box Office Tycoon,Entertainment,com.hotheadgames.android.free.hydrostone,92
+240,pythonw.exe,Tools,-,91
+241,Android system,Unknown,android,91
+242,Home,Lifestyle,com.google.android.apps.chromecast.app,91
+243,Android Auto,Auto & Vehicles,com.google.android.projection.gearhead,89
+244,Deputy,Business,com.deputy.android,88
+245,AuthManSvr.exe,Unknown,-,86
+246,ck3.exe,Unknown,-,86
+247,Permission controller,Unknown,com.google.android.permissioncontroller,86
+248,Phone Manager App Lock,Unknown,com.coloros.safecenter,84
+249,Camera,Photography,com.google.android.GoogleCamera,84
+250,Contacts,Tools,com.sonymobile.android.contacts,82
+251,ftbapp.exe,Unknown,-,82
+252,mathpix-snipping-tool.exe,Unknown,-,82
+253,SearchApp.exe,Tools,-,81
+254,Calendar,Unknown,com.samsung.android.calendar,79
+255,bf4.exe,Unknown,-,79
+256,Amazon Shopping,Shopping,com.amazon.mShop.android.shopping,79
+257,AISuite3.exe,Unknown,-,79
+258,FamilyAlbum,Parenting,us.mitene,78
+259,WiseList,Lifestyle,com.gy.wiselist,77
+260,Calculator,Tools,com.sec.android.app.popupcalculator,76
+261,OneNote,Productivity,com.microsoft.office.onenote,76
+262,Slides,Productivity,com.google.android.apps.docs.editors.slides,76
+263,Album,Photography,com.sonyericsson.album,75
+264,videopad.exe,Unknown,-,74
+265,Files,Tools,com.google.android.documentsui,73
+266,Fate/GO,Role Playing,com.aniplex.fategrandorder.en,73
+267,Camera,Photography,com.oppo.camera,72
+268,Digital Wellbeing and parental controls,Unknown,com.samsung.android.forest,72
+269,TeamViewer.exe,Communication,-,70
+270,openssl.exe,Tools,-,69
+271,AWARE,Unknown,com.aware.phone,68
+272,python.exe,Tools,-,67
+273,KFC,Food & Drink,com.kfcaus.ordering,67
+274,Office,Productivity,com.microsoft.office.officehubrow,65
+275,PTV,Travel & Local,au.gov.vic.ptv,65
+276,Nike Training,Health & Fitness,com.nike.ntc,65
+277,Mango TV,Video Players & Editors,com.hunantv.imgo.activity.inter,65
+278,vncviewer.exe,Video Players & Editors,-,65
+279,Contacts,Tools,com.samsung.android.app.contacts,65
+280,Chat,Business,com.google.android.apps.dynamite,63
+281,ProtonMail,Communication,ch.protonmail.android,63
+282,Calculator,Tools,com.coloros.calculator,63
+283,AnimeLab,Entertainment,com.animelab.android.handset,61
+284,LogiOverlay.exe,Unknown,-,60
+285,Clock,Unknown,com.sonyericsson.organizer,58
+286,Stripe,Business,com.stripe.android.dashboard,58
+287,Origin.exe,Unknown,-,57
+288,FitOn,Health & Fitness,com.fiton.android,57
+289,VicEmergency,News & Magazines,com.naturallybeing.fireready,55
+290,Gallery,Unknown,com.android.gallery3d,55
+291,Steam.exe,Unknown,-,55
+292,nup.exe,Unknown,-,54
+293,闲鱼,Unknown,com.taobao.idlefish,54
+294,Receiver.exe,Unknown,-,54
+295,Pincremental,Simulation,com.Makopaz.Pincremental,54
+296,Fortnite,Unknown,com.epicgames.fortnite,52
+297,Weather,Unknown,com.sec.android.daemonapp,51
+298,Bitwarden,Productivity,com.x8bit.bitwarden,51
+299,TIM.exe,Unknown,-,51
+300,MATLABWindow.exe,Unknown,-,51
+301,OpenWith.exe,Unknown,-,50
+302,Device maintenance,Tools,com.samsung.android.lool,50
+303,AliExpress,Shopping,com.alibaba.aliexpresshd,50
+304,Contacts,Unknown,com.samsung.android.contacts,49
+305,Battle.net.exe,Unknown,-,49
+306,Hotel Empire Tycoon,Simulation,com.codigames.hotel.empire.tycoon.idle.game,49
+307,Centrelink,Productivity,au.gov.dhs.centrelinkexpressplus,49
+308,Photo Editor,Unknown,com.sec.android.mimage.photoretouching,48
+309,Paprika 3,Food & Drink,com.hindsightlabs.paprika.android.v3,48
+310,RoV,Action,com.garena.game.kgth,47
+311,upc.exe,Unknown,-,47
+312,Puzzle Page,Puzzle,com.appynation.puzzlepage,47
+313,Clue,Health & Fitness,com.clue.android,46
+314,Steam,Entertainment,com.valvesoftware.android.steam.community,46
+315,EarTrumpet.exe,Unknown,-,45
+316,mmc.exe,Unknown,-,45
+317,minecraft.exe,Unknown,-,45
+318,RtkNGUI64.exe,Unknown,-,44
+319,Fit,Health & Fitness,com.google.android.apps.fitness,44
+320,Mi Fit,Health & Fitness,com.xiaomi.hm.health,44
+321,Chess Tempo,Board,com.chesstempo.mobile,43
+322,Game Launcher,Unknown,com.samsung.android.game.gamehome,43
+323,WEBTOON,Comics,com.naver.linewebtoon,43
+324,AcroRd32.exe,Unknown,-,43
+325,Money Lover,Finance,com.bookmark.money,43
+326,imo,Communication,com.imo.android.imoim,42
+327,Official Account,Business,com.linecorp.lineoa,42
+328,vpndownloader.exe,Unknown,-,42
+329,MinecraftLauncher.exe,Unknown,-,42
+330,Accordance.exe,Unknown,-,41
+331,Easy Voice Recorder,Productivity,com.coffeebeanventures.easyvoicerecorder,41
+332,Uber,Maps & Navigation,com.ubercab,41
+333,Files,Unknown,com.android.documentsui,41
+334,OppoAod,Unknown,com.oppo.aod,40
+335,NEXT,Finance,ktbcs.netbank,40
+336,Wireless Settings,Unknown,com.coloros.wirelesssettings,40
+337,Voice Recorder,Tools,com.sec.android.app.voicenote,39
+338,Camera,Unknown,com.sonyericsson.android.camera,39
+339,WeightFit,Health & Fitness,app.weightfit.android,39
+340,aomhost64.exe,Unknown,-,39
+341,TahlilGaran TDictionary,Education,org.tahlilgaran.tdictionary,38
+342,nsload.exe,Unknown,-,38
+343,AppFollower.exe,Unknown,-,38
+344,mshta.exe,Unknown,-,37
+345,FitCloud,Health & Fitness,com.topstep.fitcloud,37
+346,My Telstra,Tools,com.telstra.mobile.android.mytelstra,37
+347,tramTracker,Travel & Local,com.yarratrams.tramtracker,37
+348,BOM Weather,Weather,au.gov.bom.metview,36
+349,flybuys,Shopping,com.coles.android.flybuys.release,36
+350,Musixmatch.exe,Unknown,-,36
+351,Choices,Simulation,com.pixelberrystudios.choices,36
+352,Microsoft News,News & Magazines,com.microsoft.amp.apps.bingnews,36
+353,FallGuys_client.exe,Unknown,-,35
+354,Monopoly at Macca's,Board,au.com.mcdonalds.monopoly,35
+355,Duo,Communication,com.google.android.apps.tachyon,34
+356,Health Mate,Health & Fitness,com.withings.wiscale2,34
+357,SndVol.exe,Unknown,-,34
+358,cleanmgr.exe,Unknown,-,34
+359,SmartAudio3.exe,Unknown,-,34
+360,AsPowerBar.exe,Unknown,-,32
+361,XVIDEOS,Unknown,com.wg.xvideos.app,32
+362,Ecosia,Communication,com.ecosia.android,31
+363,T2W nimbus,Productivity,com.time2work.employeeapp.android,31
+364,Evernote,Productivity,com.evernote,30
+365,Qmee Surveys,Shopping,com.qmee.mobile,30
+366,Iris,Unknown,com.samsung.android.server.iris,30
+367,Clock,Tools,com.google.android.deskclock,30
+368,Compass,Education,com.jdlf.compass,29
+369,SoundCloud,Music & Audio,com.soundcloud.android,29
+370,AFL,Sports,com.telstra.android.afl,29
+371,GoogleDriveFS.exe,Unknown,-,28
+372,WerFault.exe,Unknown,-,28
+373,Piazza,Education,com.piazza.android,28
+374,wordpad.exe,Unknown,-,28
+375,RimWorldWin64.exe,Unknown,-,28
+376,Vanced Manager,Unknown,com.vanced.manager,28
+377,rundll32.exe,Unknown,-,28
+378,windirstat.exe,Unknown,-,27
+379,F-Droid,Unknown,org.fdroid.fdroid,27
+380,Tiny Tower,Simulation,com.nimblebit.tinytower,27
+381,pc-client.exe,Unknown,-,27
+382,QQ.exe,Unknown,-,27
+383,iexplore.exe,Unknown,-,27
+384,Expo,Productivity,host.exp.exponent,26
+385,RzSynapse.exe,Unknown,-,26
+386,Zip,Finance,co.zip,26
+387,Shopee,Shopping,com.shopee.ph,26
+388,Notes,Unknown,com.coloros.note,25
+389,texstudio.exe,Unknown,-,25
+390,Device care,Tools,com.samsung.android.lool,25
+391,COVIDSafe,Health & Fitness,au.gov.health.covidsafe,25
+392,Authenticator,Business,com.azure.authenticator,25
+393,Google Play Movies & TV,Video Players & Editors,com.google.android.videos,25
+394,Gaomon Tablet.exe,Unknown,-,25
+395,Yubo,Social,co.yellw.yellowapp,24
+396,gStrings,Tools,org.cohortor.gstrings,24
+397,Contacts,Communication,com.google.android.contacts,24
+398,Reverso Context,Books & Reference,com.softissimo.reverso.context,24
+399,PickerHost.exe,Unknown,-,24
+400,ptoneclk.exe,Unknown,-,24
+401,鲨鱼记账,Finance,com.shark.jizhang,23
+402,Fitbit,Health & Fitness,com.fitbit.FitbitMobile,23
+403,Video Player,Unknown,com.samsung.android.video,23
+404,domestic_violence,Unknown,com.example.domestic_violence,23
+405,launcher.exe,Unknown,-,23
+406,STEPtember,Health & Fitness,au.com.mangochutney.steptember,23
+407,RobloxPlayerBeta.exe,Unknown,-,23
+408,msiexec.exe,Unknown,-,23
+409,Podcast Player,News & Magazines,com.podcast.podcasts,23
+410,Anaconda3-2020.02-Windows-x86_64.exe,Unknown,-,23
+411,My Files,Tools,com.sec.android.app.myfiles,22
+412,debut.exe,Unknown,-,22
+413,Clock,Unknown,com.android.deskclock,22
+414,Sheets,Productivity,com.google.android.apps.docs.editors.sheets,22
+415,Bank of Melbourne,Finance,org.bom.bank,22
+416,googledrivesync.exe,Unknown,-,22
+417,dllhost.exe,Unknown,-,22
+418,NewPipe,Unknown,org.schabi.newpipe,22
+419,wmplayer.exe,Unknown,-,21
+420,HiBoard,Unknown,com.huawei.intelligent,21
+421,PDF Viewer,Productivity,com.pspdfkit.viewer,21
+422,TrolleyExpress.exe,Unknown,-,21
+423,Bangla Keyboard,Tools,com.jetbox.bnkeyboard,21
+424,SafeZone,Tools,com.criticalarc.safezoneapp,21
+425,Borderlands2.exe,Unknown,-,21
+426,metime,Education,au.com.mcdonalds.metimemedia,21
+427,SD Maid,Tools,eu.thedarken.sdm,20
+428,bfv.exe,Unknown,-,20
+429,26258a52.rbf,Unknown,-,20
+430,Tapped Out,Casual,com.ea.game.simpsons4_row,20
+431,Dropbox,Productivity,com.dropbox.android,20
+432,Blood Pressure,Health & Fitness,com.aadhk.lite.bptracker,20
+433,Video Panda Compress & Share,Video Players & Editors,com.pandavideocompressor,19
+434,Wallpapers,Unknown,com.samsung.android.app.dressroom,19
+435,dxdiag.exe,Unknown,-,19
+436,Zomato,Food & Drink,com.application.zomato,19
+437,Setup.exe,Unknown,-,18
+438,Software update,Unknown,com.wssyncmldm,18
+439,qbittorrent.exe,Unknown,-,18
+440,Alipay,Finance,com.eg.android.AlipayGphone,18
+441,WPS Office,Productivity,cn.wps.moffice_eng,18
+442,Xero Me,Business,com.xero.payday,18
+443,CoolApk,Unknown,com.coolapk.market,18
+444,conda.exe,Unknown,-,17
+445,Google Play Books,Books & Reference,com.google.android.apps.books,17
+446,mpv,Video Players & Editors,is.xyz.mpv,17
+447,Samsung Flow,Productivity,com.samsung.android.galaxycontinuity,17
+448,pageant.exe,Unknown,-,17
+449,EpicGamesLauncher.exe,Unknown,-,17
+450,Disney+,Entertainment,com.disney.disneyplus,17
+451,DroneDeploy,Tools,com.dronedeploy.beta,17
+452,Flow.exe,Unknown,-,16
+453,PrefPanel.exe,Unknown,-,16
+454,psr.exe,Unknown,-,16
+455,1Password,Productivity,com.agilebits.onepassword,16
+456,Best Metronome And Tuner,Music & Audio,com.netigen.bestmusicset,16
+457,Trello,Productivity,com.trello,16
+458,Weather,Unknown,com.huawei.android.totemweather,16
+459,Explain Everything™,Education,com.explaineverything.explaineverything,16
+460,Bualuang mBanking,Finance,com.bbl.mobilebanking,16
+461,Smart Assistant,Unknown,com.coloros.assistantscreen,16
+462,anlp.exe,Unknown,-,16
+463,Authenticator,Tools,com.google.android.apps.authenticator2,16
+464,Camera,Unknown,com.huawei.camera,16
+465,SmartThings,Lifestyle,com.samsung.android.oneconnect,16
+466,Solid Explorer,Productivity,pl.solidexplorer2,16
+467,Twitch,Entertainment,tv.twitch.android.app,15
+468,Reminder,Unknown,com.samsung.android.app.reminder,15
+469,Hyper.exe,Unknown,-,15
+470,Donate Blood,Medical,au.com.donateblood.donorapp.prod,15
+471,Viber,Communication,com.viber.voip,15
+472,Your Phone Companion,Productivity,com.microsoft.appmanager,15
+473,WorkZone,Productivity,au.com.webscale.workzone.android,15
+474,Notion,Productivity,notion.id,15
+475,9Now,Entertainment,au.com.mi9.jumpin.app,15
+476,Meditation,Lifestyle,com.clay.meditation,14
+477,Assistive Ball,Unknown,com.coloros.floatassistant,14
+478,SystemPropertiesAdvanced.exe,Unknown,-,14
+479,Creative Cloud.exe,Unknown,-,14
+480,Bumble,Lifestyle,com.bumble.app,14
+481,Game Space,Unknown,com.coloros.gamespaceui,14
+482,AusPost,Business,au.com.auspost.android,14
+483,Camera,Unknown,com.GoogleCamera.Wichaya,14
+484,GameTurbo.exe,Unknown,-,14
+485,Clash of Clans,Strategy,com.supercell.clashofclans,14
+486,Mi Store,Shopping,com.mi.global.shop,13
+487,Truecaller,Communication,com.truecaller,13
+488,Paradox Launcher.exe,Unknown,-,13
+489,WeChatSetup.exe,Unknown,-,13
+490,LineMediaPlayer.exe,Unknown,-,13
+491,SelfService.exe,Unknown,-,13
+492,LicensingUI.exe,Unknown,-,13
+493,Hearthstone,Card,com.blizzard.wtcg.hearthstone,13
+494,Shazam,Music & Audio,com.shazam.android,13
+495,Smiling Mind,Health & Fitness,com.smilingmind.app,12
+496,LockDownBrowser.exe,Unknown,-,12
+497,SweetDreamsUnity.exe,Unknown,-,12
+498,Files,Unknown,com.huawei.hidisk,12
+499,Happy Pets,Education,au.edu.unimelb.eresearch.happypets,12
+500,slack.exe,Unknown,-,12
+501,PayPal,Finance,com.paypal.android.p2pmobile,12
+502,PotPlayerMini.exe,Unknown,-,12
+503,Piedimonte’s Supermarket,Food & Drink,com.myfoodlink.android.piedimontes,12
+504,USB Debugging,Unknown,com.coloros.usbselection,12
+505,POCO Launcher,Personalization,com.mi.android.globallauncher,12
+506,Hue Essentials,Lifestyle,com.superthomaslab.hueessentials,12
+507,Word,Productivity,com.microsoft.office.word,12
+508,RadeonSoftware.exe,Unknown,-,12
+509,Unity Hub.exe,Unknown,-,12
+510,HiSearch,Unknown,com.huawei.search,11
+511,MuseScore,Music & Audio,com.musescore.playerlite,11
+512,Cake,Education,me.mycake,11
+513,Galaxy Buds+,Tools,com.samsung.accessory.popcornmgr,11
+514,Rest,Finance,rest.com.rest,11
+515,SCNotification.exe,Unknown,-,11
+516,Calculator,Tools,com.tct.calculator,11
+517,geek64.exe,Unknown,-,11
+518,Illustrator.exe,Unknown,-,11
+519,old_chrome.exe,Unknown,-,11
+520,Bandcamp,Music & Audio,com.bandcamp.android,10
+521,Sound picker,Unknown,com.samsung.android.app.soundpicker,10
+522,Galaxy Store,Unknown,com.sec.android.app.samsungapps,10
+523,edX,Education,org.edx.mobile,10
+524,七猫免费小说,Unknown,com.kmxs.reader,10
+525,Un_A.exe,Unknown,-,10
+526,Calculator,Unknown,com.oneplus.calculator,10
+527,zTscoder.exe,Unknown,-,10
+528,9News,News & Magazines,nineNewsAlerts.nine.com,10
+529,.Battle.net.exe.823.11444.temp,Unknown,-,10
+530,Browser,Unknown,com.android.browser,10
+531,wfcrun32.exe,Unknown,-,10
+532,Samsung account,Unknown,com.osp.app.signin,10
+533,Gallery,Unknown,com.miui.gallery,10
+534,Weather,Unknown,com.coloros.weather2,10
+535,SEEK Jobs,Business,au.com.seek,10
+536,WinSCP-5.17.3-Setup.tmp,Unknown,-,10
+537,Secure Keyboard,Unknown,com.coloros.securitykeyboard,9
+538,setup.exe,Unknown,-,9
+539,Nike⁠ Run Club,Health & Fitness,com.nike.plusgps,9
+540,Flour,Tools,benpai.flour,9
+541,RazerInstaller.exe,Unknown,-,9
+542,LineInst.exe,Unknown,-,9
+543,Company Portal,Business,com.microsoft.windowsintune.companyportal,9
+544,RobloxPlayerLauncher.exe,Unknown,-,9
+545,IP Webcam,Video Players & Editors,com.pas.webcam,9
+546,Weatherzone+,Unknown,au.com.weatherzone.android.weatherzoneplus,9
+547,rstudio.exe,Unknown,-,9
+548,Shadow Of Death,Action,com.Zonmob.Stickman.FightingGames.ShadowOfDeath,9
+549,Permissions Management of Phone Manage,Unknown,com.coloros.securitypermission,9
+550,Tripadvisor,Travel & Local,com.tripadvisor.tripadvisor,9
+551,Knitting Genius,Lifestyle,com.tricoton,9
+552,Phone Manager,Unknown,com.coloros.phonemanager,9
+553,Grab,Maps & Navigation,com.grabtaxi.passenger,9
+554,Adobe Scan,Business,com.adobe.scan.android,9
+555,King James Bible,Books & Reference,kjv.bible.kingjamesbible,9
+556,TeamViewer,Productivity,com.teamviewer.teamviewer.market.mobile,9
+557,BrCcUxSys.exe,Unknown,-,9
+558,Hangouts,Communication,com.google.android.talk,9
+559,Phone Services,Unknown,com.android.phone,8
+560,InDesign.exe,Unknown,-,8
+561,Coursera,Education,org.coursera.android,8
+562,Chess,Board,com.zynga.chess.googleplay,8
+563,Authy,Tools,com.authy.authy,8
+564,TsProgressUI.exe,Unknown,-,8
+565,WeiboIntl,Social,com.weico.international,8
+566,HungryPanda,Food & Drink,com.hungrypanda.waimai,8
+567,remoting_desktop.exe,Unknown,-,8
+568,WeChatApp.exe,Unknown,-,8
+569,Tumblr,Social,com.tumblr,8
+570,Weather Forecast,Unknown,com.samsung.android.weather,8
+571,FlashUtil32_32_0_0_303_pepper.exe,Unknown,-,8
+572,Idle Airport Tycoon,Simulation,com.codigames.idle.airport.tycoon,8
+573,Battle_Realms_F.exe,Unknown,-,8
+574,Contacts,Unknown,com.oneplus.contacts,8
+575,SetupEmpatica_2.0.3.5119_driver_dotnet.exe,Unknown,-,8
+576,Duolingo,Education,com.duolingo,7
+577,puttygen.exe,Unknown,-,7
+578,Adobe Desktop Service.exe,Unknown,-,7
+579,Tuner,Music & Audio,jp.co.roland.bosstuner,7
+580,Kids Home,Unknown,com.sec.android.app.kidshome,7
+581,Settings Suggestions,Unknown,com.android.settings.intelligence,7
+582,LogiOptionsUI.exe,Unknown,-,7
+583,EaseOfAccessDialog.exe,Unknown,-,7
+584,SIM Detection,Unknown,com.sonyericsson.simdetection,7
+585,Gaomon Windows Driver_v14.8.133.1259_beta.tmp,Unknown,-,7
+586,Recent Tasks,Unknown,com.coloros.recents,7
+587,CaptivePortalLogin,Unknown,com.android.captiveportallogin,7
+588,pdfelement-pro_full5239.tmp,Unknown,-,7
+589,Earth,Travel & Local,com.google.earth,7
+590,Data Usage,Unknown,com.coloros.simsettings,7
+591,matlab_R2020a_win64.exe,Unknown,-,7
+592,onsengame.exe,Unknown,-,7
+593,ShapeCollector.exe,Unknown,-,7
+594,Air command,Unknown,com.samsung.android.service.aircommand,7
+595,nswcc.exe,Unknown,-,7
+596,Accessibility,Unknown,com.samsung.accessibility,6
+597,SelfServicePlugin.exe,Unknown,-,6
+598,WacomDesktopCenter.exe,Unknown,-,6
+599,Eventbrite,Entertainment,com.eventbrite.attendee,6
+600,UG,Music & Audio,com.ultimateguitar.ugpro,6
+601,Watch Active2 Plugin,Tools,com.samsung.android.gearrplugin,6
+602,Hoichoi,Entertainment,com.viewlift.hoichoi,6
+603,Optus Sport,Sports,au.com.optus.sport,6
+604,amaysim,Tools,au.com.amaysim.android,6
+605,Twitch.exe,Unknown,-,6
+606,PDapp.exe,Unknown,-,6
+607,EMPATICA,Unknown,-,6
+608,Period Tracker,Beauty,com.northpark.periodtracker,6
+609,Personal Safety,Tools,com.google.android.apps.safetyhub,6
+610,Trello.exe,Unknown,-,6
+611,KTC Mobile,Finance,com.tapktc.app,6
+612,Pleco,Books & Reference,com.pleco.chinesesystem,6
+613,MoveSpring,Health & Fitness,com.movespring,6
+614,Bangla Dictionary,Education,com.simplesln.bn,6
+615,TEEgrisTuiService,Unknown,com.samsung.sec.android.teegris.tui_service,6
+616,Audio Books,Education,com.AudioFairytales,6
+617,SpaceEngineers.exe,Unknown,-,6
+618,BrLauncher.exe,Unknown,-,6
+619,ISLANDERS.exe,Unknown,-,6
+620,Video trimmer,Unknown,com.samsung.app.newtrim,6
+621,3CX,Communication,com.tcx.sipphone14,6
+622,Amazon Alexa,Lifestyle,com.amazon.dee.app,6
+623,combinedSetup.exe,Unknown,-,5
+624,Calculator,Unknown,com.android.calculator2,5
+625,tclkit.exe,Unknown,-,5
+626,Smart Switch,Tools,com.sec.android.easyMover,5
+627,Idle Miner,Simulation,com.fluffyfairygames.idleminertycoon,5
+628,UC浏览器,Unknown,com.UCMobile,5
+629,FinchGame.exe,Unknown,-,5
+630,CitrixReceiverUpdater.exe,Unknown,-,5
+631,Opera,Communication,com.opera.browser,5
+632,FileZilla_3.46.3_win64_sponsored-setup.exe,Unknown,-,5
+633,Windy,Weather,com.windyty.android,5
+634,Remote Mouse,Tools,com.hungrybolo.remotemouseandroid,5
+635,Rewards,Lifestyle,au.com.frequentvalues.redenergy,5
+636,msdt.exe,Unknown,-,5
+637,Yahoo7 Mail,Communication,com.yahoo.mobile.client.android.mail,5
+638,Product Finder,Shopping,com.bunnings.retail,5
+639,Install Stykz 1.0.2.tmp,Unknown,-,5
+640,SGNews.exe,Unknown,-,5
+641,Link to Windows Service,Unknown,com.samsung.android.mdx,5
+642,mathpix_snipping_tool_setup.tmp,Unknown,-,5
+643,Belong,Tools,com.belong,5
+644,Samsung Notes Add-ons,Unknown,com.samsung.android.app.notes.addons,5
+645,NordVPN,Tools,com.nordvpn.android,5
+646,OriginThinSetupInternal.exe,Unknown,-,5
+647,Wish,Shopping,com.contextlogic.wish,5
+648,Pathfinder 2E Spell DB,Entertainment,com.fyjham_ts.pathfinder_2e_spell_db,5
+649,Shark Tank,Simulation,com.sonypicturestelevision.sharktank,5
+650,Meet,Business,com.google.android.apps.meetings,5
+651,OneDrive.exe,Unknown,-,5
+652,Everything.exe,Unknown,-,5
+653,LehraStudioUltimate,Music & Audio,au.com.lehrastudio.lehrastudioultimate,4
+654,Autofill with Samsung Pass,Unknown,com.samsung.android.samsungpassautofill,4
+655,Programmed,Business,au.com.programmed.go,4
+656,Optimizer,Unknown,com.huawei.systemmanager,4
+657,rainbowsix_be.exe,Unknown,-,4
+658,Libby,Books & Reference,com.overdrive.mobile.android.libby,4
+659,QR & Barcode Scanner,Tools,com.gamma.scan,4
+660,_iu14D2N.tmp,Unknown,-,4
+661,MusNotificationUx.exe,Unknown,-,4
+662,Game Booster,Unknown,com.samsung.android.game.gametools,4
+663,HSS-8.7.1-install-plain-773-plain.exe,Unknown,-,4
+664,Mi Video,Entertainment,com.miui.videoplayer,4
+665,Play & Learn Science,Educational,org.pbskids.playandlearnscience,4
+666,DraStic,Action,com.dsemu.drastic,4
+667,Calculator,Tools,com.google.android.calculator,4
+668,IMDb,Entertainment,com.imdb.mobile,4
+669,atmgr_old.exe,Unknown,-,4
+670,Will it Crush?,Simulation,com.dimchi.crush,4
+671,Booking.com,Travel & Local,com.booking,4
+672,calc.exe,Unknown,-,4
+673,Phone,Unknown,com.samsung.android.incallui,4
+674,Wireshark.exe,Unknown,-,4
+675,GG City,Simulation,com.townsend.betascraper,4
+676,Permissions Management of Phone Manager,Unknown,com.coloros.securitypermission,4
+677,netsh.exe,Unknown,-,4
+678,Google Opinion Rewards,Tools,com.google.android.apps.paidtasks,4
+679,Joint horizon,Lifestyle,com.generalcomp.lianshijie,4
+680,git-credential-manager.exe,Unknown,-,4
+681,Samsung voice input,Unknown,com.samsung.android.svoiceime,4
+682,ConfigurationWizard.exe,Unknown,-,4
+683,ScreenToGif.exe,Unknown,-,4
+684,EndNote.exe,Unknown,-,4
+685,SogouCloud.exe,Unknown,-,4
+686,gitkraken.exe,Unknown,-,4
+687,Software Update Interface,Unknown,com.oppo.otaui,4
+688,Salary Calculator,Finance,com.saiyyan.salarycalc,4
+689,YoudaoDict.exe,Unknown,-,4
+690,English,Books & Reference,livio.pack.lang.en_US,4
+691,Gallery,Unknown,com.tct.gallery3d,4
+692,Epic Games,Unknown,com.epicgames.portal,4
+693,Smartwatch Notificator,Communication,com.smartwatch.bluetooth.sync.notifications,4
+694,ShopBack,Shopping,com.shopback.app,4
+695,RamCache.exe,Unknown,-,4
+696,LineLauncher.exe,Unknown,-,4
+697,Installer.exe,Unknown,-,4
+698,SGTool.exe,Unknown,-,4
+699,Global Challenge,Health & Fitness,com.gettheworldmoving.hundreddaysevent,4
+700,HiTouch,Unknown,com.huawei.hitouch,4
+701,Galaxy Wearable,Tools,com.samsung.android.app.watchmanager,4
+702,concentr.exe,Unknown,-,4
+703,V/Line,Maps & Navigation,com.vortilla.myline,4
+704,Catch Connect PaaS Int,Business,com.prvidr.paas.app.prod,4
+705,Vanced microG,Unknown,com.mgoogle.android.gms,4
+706,BrCtrlCntr.exe,Unknown,-,3
+707,"Lisa's
+Music Band",Unknown,com.sec.kidsplat.media.kidsmusic,3
+708,VicroadsTest,Education,com.freeman1stcn.vicroads,3
+709,Boost Juice,Shopping,com.redcat.BoostApp,3
+710,Video (player),Video Players & Editors,com.coloros.video,3
+711,Hungry Jack’s,Food & Drink,com.webling.hungryjacks,3
+712,UplayInstaller.exe,Unknown,-,3
+713,Ballz Rollerz Idle 3D Puzzle,Simulation,com.homiebearstudio.watchidle,3
+714,Mi Browser,Tools,com.mi.globalbrowser,3
+715,Media and devices,Unknown,com.samsung.android.mdx.quickboard,3
+716,Tuner - Pitched,Music & Audio,com.stonekick.tuner,3
+717,FeedbackReporter.exe,Unknown,-,3
+718,Recorder,Unknown,com.android.soundrecorder,3
+719,Smart Life,Lifestyle,esrith.meawms,3
+720,Guitar Pro,Music & Audio,com.arobasmusic.guitarpro,3
+721,efsui.exe,Unknown,-,3
+722,Dashboard,Unknown,com.oneplus.security,3
+723,splwow64.exe,Unknown,-,3
+724,Daily BD All Newspapers,News & Magazines,com.news.newspaperread,3
+725,Print Spooler,Unknown,com.android.printspooler,3
+726,IG Trading,Finance,com.iggroup.android.cfd,3
+727,Samsung Music,Music & Audio,com.sec.android.app.music,3
+728,Creative Cloud Helper.exe,Unknown,-,3
+729,NortonSecurity.exe,Unknown,-,3
+730,File Manager,Tools,com.mi.android.globalFileexplorer,3
+731,Notepad,Unknown,com.example.android.notepad,3
+732,Headphone,Music & Audio,com.harman.akgn20lt,3
+733,Kanopy,Entertainment,com.kanopy,3
+734,Smart View,Unknown,com.samsung.android.smartmirroring,3
+735,SpeechUXWiz.exe,Unknown,-,3
+736,regedit.exe,Unknown,-,3
+737,Training,Health & Fitness,com.runtastic.android.results.lite,3
+738,Balance,Unknown,-,3
+739,OptionalFeatures.exe,Unknown,-,3
+740,brave.exe,Unknown,-,3
+741,Talisman.exe,Unknown,-,3
+742,AASIapp.exe,Unknown,-,3
+743,dontstarve_steam.exe,Unknown,-,3
+744,SystemSettingsAdminFlows.exe,Unknown,-,3
+745,DroidCam,Tools,com.dev47apps.droidcam,3
+746,Downloads,Unknown,com.android.providers.downloads.ui,3
+747,Device Personalisation Services,Unknown,com.google.android.as,3
+748,myGovID,Productivity,au.gov.ato.mygovid.droid,3
+749,بادصبا,Unknown,com.mobiliha.badesaba,2
+750,Adblock Plus for Samsung Internet,Communication,org.adblockplus.adblockplussbrowser,2
+751,AirVisual,Weather,com.airvisual,2
+752,Afterpay,Shopping,com.afterpaymobile,2
+753,ndp48-web.exe,Unknown,-,2
+754,nchsetup.exe,Unknown,-,2
+755,picpick.exe,Unknown,-,2
+756,HPUpdate.exe,Unknown,-,2
+757,Write on PDF,Productivity,com.samsung.android.spdfnote,2
+758,AppGallery,Unknown,com.huawei.appmarket,2
+759,mintty.exe,Unknown,-,2
+760,Houseparty,Social,com.herzick.houseparty,2
+761,acrotray.exe,Unknown,-,2
+762,bncsaui.exe,Unknown,-,2
+763,Hobi,Entertainment,com.hobi.android,2
+764,GrammarlyAddInSetup6.7.211.exe,Unknown,-,2
+765,consent.exe,Unknown,-,2
+766,GrammarlyAddInSetup6.7.214.exe,Unknown,-,2
+767,13cabs,Maps & Navigation,com.cabs,2
+768,devenv.exe,Unknown,-,2
+769,unins000.exe,Unknown,-,2
+770,webex.exe,Unknown,-,2
+771,farcry3.exe,Unknown,-,2
+772,AquaSnap.DpiAwareAgent.exe,Unknown,-,2
+773,fsquirt.exe,Unknown,-,2
+774,AquaSnap.Daemon.exe,Unknown,-,2
+775,hoi4.exe,Unknown,-,2
+776,loginwindow,Unknown,-,2
+777,lync.exe,Unknown,-,2
+778,AquaSnap.Updater.exe,Unknown,-,2
+779,Liven,Food & Drink,au.com.liven.android,2
+780,DJCUHost.exe,Unknown,-,2
+781,SteamSetup.exe,Unknown,-,2
+782,Search,Unknown,com.oppo.quicksearchbox,2
+783,Contacts,Unknown,com.tct.contacts,2
+784,Call settings,Unknown,com.samsung.android.app.telephonyui,2
+785,Camera,Unknown,com.android.camera,2
+786,Systemassistent,Unknown,-,2
+787,Samsung Pass,Unknown,com.samsung.android.authfw,2
+788,ISD_Tablet.exe,Unknown,-,2
+789,Camera,Unknown,org.codeaurora.snapcam,2
+790,Launcher.exe,Unknown,-,2
+791,Eventbrite,Business,com.eventbrite.organizer,2
+792,PROTOC~1.EXE,Unknown,-,2
+793,SamsungDeXEasySetup.exe,Unknown,-,2
+794,Dumb Ways,Casual,com.popreach.dumbways,2
+795,CopyTransHEICforWindowsv1.006.tmp,Unknown,-,2
+796,Square Point of Sale,Business,com.squareup,2
+797,Prime Video,Entertainment,com.amazon.avod.thirdpartyclient,2
+798,Speedtest,Tools,org.zwanoo.android.speedtest,2
+799,Software update,Unknown,com.sonyericsson.updatecenter,2
+800,NVIDIA Share.exe,Unknown,-,2
+801,Scrap II,Casual,com.scrap.clicker.android,2
+802,Shubi Learning Games,Educational,air.com.shubi.LearnCNLW.english,2
+803,Google Play Games,Entertainment,com.google.android.play.games,2
+804,Shell,Unknown,com.android.shell,2
+805,Nando's,Food & Drink,com.redcat.PeriPerks,2
+806,Nonogram.com,Puzzle,com.easybrain.nonogram,2
+807,Industry Beans,Entertainment,com.mytidyapp.industrybeans,2
+808,Calendar,Unknown,com.android.calendar,2
+809,Call,Unknown,com.android.dialer,2
+810,ONENOTEM.EXE,Unknown,-,2
+811,Galaxy Themes,Unknown,com.samsung.android.themestore,2
+812,Wallpapers,Personalization,com.google.android.apps.wallpaper,2
+813,Weatherzone,Weather,au.com.weatherzone.android.weatherzonefreeapp,2
+814,RWY,Maps & Navigation,com.ozrunways.marvin,2
+815,Whoscall,Communication,gogolook.callgogolook2,2
+816,File Manager,Unknown,com.coloros.filemanager,2
+817,VNC-Viewer-6.1.1-Windows-64bit.exe,Unknown,-,2
+818,DJI GO 4,Video Players & Editors,dji.go.v4,2
+819,VIP Access,Tools,com.verisign.mvip.main,2
+820,UpdaterUI.exe,Unknown,-,2
+821,Meme Generator Free,Entertainment,com.zombodroid.MemeGenerator,2
+822,Podcast Addict,News & Magazines,com.bambuna.podcastaddict,2
+823,Udemy,Education,com.udemy.android,2
+824,Evernote_6.22.3.8816.exe,Unknown,-,2
+825,Bixby Vision,Unknown,com.samsung.android.visionintelligence,2
+826,Roku,Entertainment,com.roku.remote,2
+827,Traffic Empire Tycoon,Simulation,com.leku.TransportTycoon,2
+828,EDLaunch.exe,Unknown,-,1
+829,PowerPoint,Productivity,com.microsoft.office.powerpoint,1
+830,DWWIN.EXE,Unknown,-,1
+831,OneDrive,Productivity,com.microsoft.skydrive,1
+832,DeX for PC,Unknown,com.sec.android.app.dexonpc,1
+833,AdobeCollabSync.exe,Unknown,-,1
+834,Dynopunk.exe,Unknown,-,1
+835,Khan Kids,Education,org.khankids.android,1
+836,DeakinScout,Education,au.edu.deakin.DeakinScout.prod,1
+837,pbsvc_fc3.exe,Unknown,-,1
+838,ptsrv.exe,Unknown,-,1
+839,DingTalk.exe,Unknown,-,1
+840,Phone,Unknown,com.android.phone,1
+841,PSPad,Tools,pspad.grill.com,1
+842,PeopleExperienceHost.exe,Unknown,-,1
+843,Fondue.exe,Unknown,-,1
+844,Park Master,Puzzle,com.kayac.park_master,1
+845,GUP.exe,Unknown,-,1
+846,WowClassic.exe,Unknown,-,1
+847,Okta Verify,Productivity,com.okta.android.auth,1
+848,LauncherPrereqSetup_x64.exe,Unknown,-,1
+849,LockDownBrowser-2-0-6-08.exe,Unknown,-,1
+850,Listdlls64.exe,Unknown,-,1
+851,MFC-J5720DW-inst-B1-oce.EXE,Unknown,-,1
+852,File Manager,Unknown,com.jrdcom.filemanager,1
+853,6041601Cisco AnyConnect Secure Mobility Client0Uninstall.AC,Unknown,-,1
+854,8 Ball Pool,Sports,com.miniclip.eightballpool,1
+855,MSOSYNC.EXE,Unknown,-,1
+856,Magnify.exe,Unknown,-,1
+857,Manage notifications,Unknown,com.coloros.notificationmanager,1
+858,wscript.exe,Unknown,-,1
+859,GoogleDriveFSSetup.exe,Unknown,-,1
+860,wlrmdr.exe,Unknown,-,1
+861,Excel,Productivity,com.microsoft.office.excel,1
+862,EvernoteClipper.exe,Unknown,-,1
+863,GrammarlyAddInSetup6.7.204.exe,Unknown,-,1
+864,NortonUtilitiesPremiumSetup.exe,Unknown,-,1
+865,MusNotifyIcon.exe,Unknown,-,1
+866,Music,Unknown,com.android.mediacenter,1
+867,AcWebBrowser.exe,Unknown,-,1
+868,vc_redist.x64.exe,Unknown,-,1
+869,usbinst.exe,Unknown,-,1
+870,uninst.exe,Unknown,-,1
+871,ubuntu1804.exe,Unknown,-,1
+872,txupd.exe,Unknown,-,1
+873,GrammarlyAddInSetup6.7.223.exe,Unknown,-,1
+874,Etsy,Shopping,com.etsy.android,1
+875,NDP472-KB4054531-Web.exe,Unknown,-,1
+876,LINE@,Unknown,com.linecorp.lineat.android,1
+877,AcerRegistrationBackGroundTask.exe,Unknown,-,1
+878,ssonsvr.exe,Unknown,-,1
+879,MyAussie,Tools,org.aussiebroadband.myaussie,1
+880,SETLANG.EXE,Unknown,-,1
+881,Airbnb,Travel & Local,com.airbnb.android,1
+882,SpotifySetup.exe,Unknown,-,1
+883,csrss.exe,Unknown,-,1
+884,CaptivePortalLogin,Unknown,com.google.android.captiveportallogin,1
+885,Candy Crush Saga,Casual,com.king.candycrushsaga,1
+886,SynTPEnh.exe,Unknown,-,1
+887,Can I Fly There?,Unknown,com.rpasapp.casarpas.prod,1
+888,Find Me GF,Lifestyle,com.fmgf.free,1
+889,Tabletop Simulator.exe,Unknown,-,1
+890,Call Management,Unknown,com.android.server.telecom,1
+891,TeslaUnread,Unknown,com.teslacoilsw.notifier,1
+892,BPme,Maps & Navigation,com.bp.mobile.bpme.aus,1
+893,Tips,Unknown,com.samsung.android.app.tips,1
+894,Trimble Mobile Manager,Tools,com.trimble.trimblemobilemanager,1
+895,CEPHtmlEngine.exe,Unknown,-,1
+896,BvSsh.exe,Unknown,-,1
+897,Update.exe,Unknown,-,1
+898,Zoom_o42l8sofizku_6d8603b5454f4a8f.exe,Unknown,-,1
+899,Zoom_1bbdac8e17e70a87.exe,Unknown,-,1
+900,VNC-Viewer-6.20.113-Windows.exe,Unknown,-,1
+901,VS_2008_vcredist_sp1_x86.exe,Unknown,-,1
+902,HxOutlook.exe,Unknown,-,1
+903,BsSndRpt.exe,Unknown,-,1
+904,YoudaoDictUninstallTemp.exe,Unknown,-,1
+905,Briefing,News & Magazines,flipboard.boxer.app,1
+906,BrScUtil.exe,Unknown,-,1
+907,WeChatUpdate.exe,Unknown,-,1
+908,What's new,Unknown,com.samsung.android.app.social,1
+909,XboxAppServices.exe,Unknown,-,1
+910,Hss.TrayNtf.exe,Unknown,-,1
+911,Bluetooth,Unknown,com.android.bluetooth,1
+912,Catchconnect,Business,com.prvidr.paas.app.prod,1
+913,SpWebInst0.exe,Unknown,-,1
+914,QR Code Reader,Tools,tw.mobileapp.qrcode.banner,1
+915,Idle Army,Casual,com.neonplay.casualidlearmybase,1
+916,Quick Share,Unknown,com.samsung.android.app.sharelive,1
+917,DEL829D.tmp,Unknown,-,1
+918,Raiz,Finance,com.acornsau.android,1
+919,DEL157.tmp,Unknown,-,1
+920,"Crocro's
+Adventure",Educational,com.sec.kidsplat.kidsbcg,1
+921,Recorder,Unknown,com.coloros.soundrecorder,1
+922,RemoteFXvGPUDisablement.exe,Unknown,-,1
+923,Rewards,Shopping,com.woolworths.rewards,1
+924,Harvest,Business,com.harvestapp,1
+925,Risweb32.exe,Unknown,-,1
+926,BirdyBite.exe,Unknown,-,1
+927,STAMINA mode,Unknown,com.sonymobile.superstamina,1
+928,Samsung Members,Tools,com.samsung.android.voc,1
+929,Congresswolf,Role Playing,com.choiceofgames.congresswolf,1
+930,jucheck.exe,Unknown,-,1
+931,Scanner,Unknown,com.xiaomi.scanner,1
+932,HelloTalk,Education,com.hellotalk,1
+933,Hero Factory,Simulation,com.playhardlab.herofactory,1
+934,Apps,Unknown,com.samsung.android.app.appsedge,1
+935,AquaSnap.Configurator.exe,Unknown,-,1
+936,Coffee Corp,Simulation,games.starberry.coffeecorp,1
+937,CodeSetup-stable-ae08d5460b5a45169385ff3fd44208f431992451.tmp,Unknown,-,1
+938,Secure Folder,Business,com.samsung.knox.securefolder,1
+939,CodeSetup-stable-a0479759d6e9ea56afa657e454193f72aef85bd0.tmp,Unknown,-,1
+940,CnxtNotify.exe,Unknown,-,1
+941,Silvertop Taxi,Travel & Local,net.jmango.silvertop,1
+942,ImagingDevices.exe,Unknown,-,1
+943,Cisco Webex Meetings,Unknown,-,1
+944,Idle Supermarket Tycoon,Simulation,com.codigames.market.idle.tycoon,1
+945,Camera,Unknown,com.mediatek.camera,1
